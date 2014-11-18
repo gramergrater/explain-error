@@ -1,15 +1,19 @@
 {
   "name": "explain-error",
   "description": "",
-  "version": "1.0.1",
-  "homepage": "https://github.com/dominictarr/explain-error",
+  "version": "1.0.2",
+  "homepage": "https://github.com/gramergrater/explain-error",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dominictarr/explain-error.git"
+    "url": "git://github.com/gramergrater/explain-error.git"
   },
   "scripts": {
-    "test": "set -e; for t in test/*.js; do node $t; done"
+    "test": "mocha"
   },
   "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "explain-error": "file:./",
+    "mocha": "^2.0.1"
+  }
 }

@@ -1,13 +1,17 @@
-var explain = require('./')
+'use strict';
+
+var explain = require('explain-error');
 
 function explainedError(cb) {
-  require('fs').stat('neoatuhrcoahkrcophkr', function (err) {
-    if(err) cb(explain(err, 'asked for a file that certainly did not exist'))
-    else cb()
-  })
+    require('fs').stat('neoatuhrcoahkrcophkr', function (err) {
+        if (err) {
+            cb(explain(err, 'asked for a file that certainly did not exist'));
+        } else {
+            cb();
+        }
+    });
 }
 
 explainedError(function (err) {
-  throw explain(err, 'called an function that was expected to fail')
-})
-
+    throw explain(err, 'called an function that was expected to fail');
+});
